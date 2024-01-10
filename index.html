@@ -56,7 +56,12 @@ button {
     <div id="todoList">
       <h2>To-Do List</h2>
       <input type="text" id="newTask" placeholder="Add a new task" />
-      <button onclick="addTask()">Add Task</button>
+      <button id="add" onclick="addTask()"><lord-icon
+        src="https://cdn.lordicon.com/hqymfzvj.json"
+        trigger="hover"
+        colors="primary:#ffffff"
+        style="width:30px;height:30px">
+    </lord-icon></button>
 
       <ul id="tasks">
         <!-- Tasks will be added dynamically here -->
@@ -73,7 +78,12 @@ button {
           var li = document.createElement("li");
           li.innerHTML = `
                 <span>${taskText}</span>
-                <button onclick="removeTask(this)">Remove</button>
+                <button id="remove" onclick="removeTask(this)"><lord-icon
+    src="https://cdn.lordicon.com/wpyrrmcq.json"
+    trigger="hover"
+    colors="primary:#e83a30"
+    style="width:30px;height:30px">
+</lord-icon></button>
             `;
           tasksContainer.appendChild(li);
 
@@ -89,3 +99,4 @@ button {
     </script>
   </body>
 </html>
+
