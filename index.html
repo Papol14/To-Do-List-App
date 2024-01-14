@@ -55,13 +55,18 @@ button {
   <body>
     <div id="todoList">
       <h2>To-Do List</h2>
-      <input type="text" id="newTask" placeholder="Add a new task" />
-      <button id="add" onclick="addTask()"><lord-icon
-        src="https://cdn.lordicon.com/hqymfzvj.json"
-        trigger="hover"
-        colors="primary:#ffffff"
-        style="width:30px;height:30px">
-    </lord-icon></button>
+      <div class="input-box">
+        <input type="text" id="newTask" placeholder="Add a new task" />
+        <button id="add" onclick="addTask()">
+          <lord-icon
+            src="https://cdn.lordicon.com/hqymfzvj.json"
+            trigger="hover"
+            colors="primary:#ffffff"
+            style="width: 20px; height: 20px"
+          >
+          </lord-icon>
+        </button>
+      </div>
 
       <ul id="tasks">
         <!-- Tasks will be added dynamically here -->
@@ -82,7 +87,7 @@ button {
     src="https://cdn.lordicon.com/wpyrrmcq.json"
     trigger="hover"
     colors="primary:#e83a30"
-    style="width:30px;height:30px">
+    style="width:20px;height:20px">
 </lord-icon></button>
             `;
           tasksContainer.appendChild(li);
