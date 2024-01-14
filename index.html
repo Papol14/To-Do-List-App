@@ -6,6 +6,7 @@
     <title>To-Do List</title>
     <style>
       body {
+  background: #252525;
   font-family: Arial, sans-serif;
 }
 
@@ -21,20 +22,40 @@ ul {
 }
 
 li {
-  margin-bottom: 10px;
+  width: 90%;
+  margin: 0 auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
   border: 1px solid #ccc;
+  padding: 5px 0px 5px 10px;
+}
+
+li span{
+  color: #fff;
+}
+
+.input-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+h2{
+  color: #fff;
+}
+
+#newTask {
+  outline: none;
+  border: 2px solid gray;
+  color: white;
+  background-color: #555555;
+  width: 100%;
   padding: 10px;
+  height: 20px;
 }
 
-#newTask{
-    padding: 10px;
-    height: 20px;
-}
-
-#add{
+#add {
   padding: 10px;
 }
 
@@ -46,8 +67,15 @@ button {
   padding: 10px;
   border-radius: 3px;
 }
-#remove{
-  background-color: rgb(255, 255, 255);
+
+#tasks {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+#remove {
+  background-color: #252525;
 }
 
     </style>
