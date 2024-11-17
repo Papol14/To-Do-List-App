@@ -1,4 +1,5 @@
 import { dummyData } from "./data/todos";
+import TodoItem from "./components/TodoItem";
 
 const App = () => {
   return (
@@ -8,7 +9,7 @@ const App = () => {
         <div className="space-y-2">
           {dummyData.map((todo) => (
             <p key={todo.id} className="text-lg">
-              {todo.title}
+              <TodoItem todo={todo} />
             </p>
           ))}
         </div>
