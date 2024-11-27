@@ -3,7 +3,9 @@ import { useState } from "react";
 export default function AddTodoForm() {
   const [input, setInput] = useState("");
 
-  function handleSubmit() {}
+  function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+    e.preventDefault();
+  }
 
   return (
     <form className="flex">
