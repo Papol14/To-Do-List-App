@@ -1,14 +1,22 @@
 import { useState } from "react";
 
-export default function AddTodoForm() {
+interface AddTodoFormProps {
+  onSubmit: (title: string) => void;
+}
+
+export default function AddTodoForm({ onSubmit }: AddTodoFormProps) {
   const [input, setInput] = useState("");
 
   function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
+
+    if (!input.trim()) return;
+
+    onSubmit(input);
   }
 
   return (
-    <form className="flex">
+    <form onSubmit={handleSubmit} className="flex">
       <input
         value={input}
         onChange={(e) => setInput(e.target.value)}
