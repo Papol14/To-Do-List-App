@@ -13,6 +13,7 @@ export default function AddTodoForm({ onSubmit }: AddTodoFormProps) {
     if (!input.trim()) return;
 
     onSubmit(input);
+    setInput("");
   }
 
   return (
