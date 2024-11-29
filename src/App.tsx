@@ -4,10 +4,12 @@ const App = () => {
   return (
     <main className="py-10 h-screen">
       <h1 className="text-3xl font-bold text-center">Todo List</h1>
-      <div>
-        <div>
+      <div className="max-w-lg mx-auto">
+        <div className="space-y-2">
           {dummyData.map((todo) => (
-            <p key={todo.id}>{todo.title}</p>
+            <p key={todo.id} className="text-lg">
+              {todo.title}
+            </p>
           ))}
         </div>
       </div>
